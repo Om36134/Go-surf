@@ -1,10 +1,12 @@
-html{
+@import "vars";
+
+html {
   box-sizing: border-box;
 }
 
 *,
 ::after,
-::before{
+::before {
   box-sizing: inherit;
 }
 
@@ -32,32 +34,12 @@ ul, li {
   padding: 0;
 }
 
-.container{
+.container {
   max-width: 1920px;
   margin: 0 auto;
 }
 
-.headerline-left {
-  line-height: 32px;
-  letter-spacing: 7.33333px;
-  color: #FFFFFF;
-  opacity: 0.5;
-  padding-left: 103px;
-  position: relative;
-  display: inline-block;
-
-  &::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 83px;
-    left: 0;
-    top: 50%;
-    background-color: #931414;
-  }
-}
-
-.suptitle-left {
+.headline-left {
   font-size: 22px;
   line-height: 32px;
   letter-spacing: 7.33333px;
@@ -104,6 +86,20 @@ ul, li {
       width: 80px;
       height: 1px;
       background-color: $green;
+    }
+  }
+}
+
+.subtitle {
+  display: inline-block;
+  text-align: right;
+  &__head {
+    font-weight: 800;
+    font-size: 40px;
+    padding-right: 10px;
+
+    span {
+      font-weight: 100;
     }
   }
 }
